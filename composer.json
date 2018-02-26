@@ -1,18 +1,26 @@
 {
   "name"         : "jguittard/zf-geocoder",
-  "description"  : "Geocoder Service module for Zend Framework 2",
+  "description"  : "Geocoder Service module for Zend Framework",
   "type"         : "library",
-  "keywords"     : ["zf2", "geocoder", "geocoding"],
+  "keywords"     : ["zf", "geocoder", "geocoding"],
   "homepage"     : "http://github.com/jguittard/geocodermodule",
   "license"      : "BSD-3-Clause",
-  "authors"      : [{
-    "name"       : "Julien Guittard",
-    "email"      : "julien.guittard@me.com",
-    "homepage"   : "http://julienguittard.com",
-    "role"       : "Developer"
-  }],
+  "authors"      : [
+    {
+      "name"       : "Julien Guittard",
+      "email"      : "julien.guittard@me.com",
+      "homepage"   : "http://julienguittard.com",
+      "role"       : "Developer"
+    },
+    {
+      "name"       : "Matthias Büsing",
+      "email"      : "info@mb-tec.eu",
+      "homepage"   : "https://mb-tec.eu",
+      "role"       : "Developer"
+    }
+  ],
   "require"      : {
-    "php"        : ">=5.4",
+    "php"        : "5.6 || ^7.0",
     "willdurand/geocoder": "^3.3",
     "php-http/httplug": "^0.1.0",
     "zendframework/zend-stdlib": "~2.5",
@@ -25,7 +33,7 @@
     "zendframework/zend-i18n": "~2.5"
   },
   "require-dev"  : {
-    "phpunit/phpunit"           : "~4.5.0",
+    "phpunit/phpunit"           : "~5.5",
     "squizlabs/php_codesniffer" : "~2.3.4",
     "zendframework/zend-test"   : "~2.5",
     "zendframework/zend-log": "~2.5"
@@ -42,5 +50,25 @@
     "psr-4": {
       "ZFTest\\Geocoder\\" : "test/"
     }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "2.0-dev",
+      "dev-develop": "2.0-dev"
+    },
+    "zf": {
+      "module": "ZF\\Geocoder"
+    }
+  },
+  "scripts": {
+    "check": [
+      "@cs-check",
+      "@test"
+    ],
+    "upload-coverage": "coveralls -v",
+    "cs-check": "php-cs-fixer --version && php-cs-fixer fix -v --diff --dry-run",
+    "cs-fix": "php-cs-fixer fix -v",
+    "test": "phpunit",
+    "test-coverage": "phpunit --coverage-clover clover.xml"
   }
 }
