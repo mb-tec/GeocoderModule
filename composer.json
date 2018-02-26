@@ -28,7 +28,6 @@
   "require-dev"  : {
     "phpunit/phpunit"           : "~5.5",
     "squizlabs/php_codesniffer" : "~2.3.4",
-    "zendframework/zend-test"   : "~2.5",
     "zendframework/zend-log": "~2.5"
   },
   "autoload"     : {
