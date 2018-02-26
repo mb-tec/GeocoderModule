@@ -1,5 +1,5 @@
 {
-  "name"         : "jguittard/zf-geocoder",
+  "name"         : "mbtec/zf-geocoder",
   "description"  : "Geocoder Service module for Zend Framework",
   "type"         : "library",
   "keywords"     : ["zf", "geocoder", "geocoding"],
