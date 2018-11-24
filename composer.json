@@ -25,6 +25,7 @@
     "zendframework/zend-diactoros": "^2.0",
     "php-http/httplug-bundle": "^1.13",
     "php-http/curl-client": "^1.7",
+    "guzzlehttp/psr7": "^1.4",
     "geocoder-php/common-http": "^4.1"
   },
   "require-dev"  : {
